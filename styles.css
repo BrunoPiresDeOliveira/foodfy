@@ -12,12 +12,14 @@ body {
 }
 
 header {
-    margin: 2% auto;
+    margin: 0 auto;
+    margin-top: 36px;
     width: 940px;
 }
 
 header .logo {
     margin-right: 10%;
+    display: inline-block;
 }
 
 header a {
@@ -27,8 +29,14 @@ header a {
     margin-right: 30px;
 }
 
+header .links-menu-text {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+}
+
 main {
-    margin: 0 auto;
+    margin: 30px auto 50px;
     width: 940px;
 }
 
@@ -71,7 +79,7 @@ h2 {
 .recipe img {
     width: 100%;
     border-radius: 15px 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .recipe h3 {
@@ -81,10 +89,10 @@ h2 {
 .recipe p {
     font-size: 14px;
     color: #777777;
+    margin-bottom: 30px;
 }
 
 footer {
-    margin-top: 2%;
     background-color: #EEEEEE;
     text-align: center;
     padding: 1%;
@@ -108,4 +116,60 @@ footer p {
     font-size: 20px;
     color: #111111;
     margin-bottom: 20px;
+}
+
+/*========MODAL=========*/
+
+.modal-overlay {
+    background-color: rgba(0,0,0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 15px;
+    width: 660px;
+    height: 413px;
+    margin: 15% auto;
+    position: relative;
+}
+
+.modal-content img {
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 30px 30px 20px 30px;
+}
+
+.modal-content h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #111111;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #777777;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.modal .modal-content .close-modal {
+    font-size: 16px;
+    color: #999999;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: 40px;
+}
+
+/* ===== MODAL ACTIVE ===== */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
