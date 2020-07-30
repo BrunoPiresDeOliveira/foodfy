@@ -12,3 +12,7 @@ for (let recipe of recipes) {
         modalOverlay.classList.add('active')
     })
 }
+
+document.querySelector(".close-modal").addEventListener("click", function() {
+    modalOverlay.classList.remove("active")
+})
