@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Sobre - Foodfy</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="shortcut icon" href="assets/chef.png" type="image/x-icon">
-    </head>
-    <body>
-        <header>
-            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Logo do Foodfy"></a>
-            <div class="links-menu-text">
-                <a href="about.html" style="font-weight: bold;">Sobre</a>
-                <a href="recipes.html">Receitas</a>
-            </div>
-        </header>
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre - Foodfy</title>
+{% endblock %}
+                
         <main>
             <section class="about-content">
                 <div class="about-foodfy">
