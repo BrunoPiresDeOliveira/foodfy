@@ -78,6 +78,7 @@ h2 {
 
 .recipe img {
     width: 100%;
+    height: 140px;
     border-radius: 15px 15px;
     margin-bottom: 10px;
 }
@@ -89,7 +90,7 @@ h2 {
 .recipe p {
     font-size: 14px;
     color: #777777;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 footer {

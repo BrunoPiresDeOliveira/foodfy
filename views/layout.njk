@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -11,14 +10,17 @@
     </head>
     <body>
         <header>
-            <a href="index.html" class="logo"><img src="/assets/logo.png" alt="Logo do Foodfy"></a>
+            <a href="/" class="logo"><img src="/assets/logo.png" alt="Logo do Foodfy"></a>
             <div class="links-menu-text">
-                <a href="/sobre">Sobre</a>
-                <a href="/receitas">Receitas</a>
+                {% block header %}
+                    <a href="/sobre">Sobre</a>
+                    <a href="/receitas">Receitas</a>
+                {% endblock %}
             </div>
         </header>
         {% block main %}
         {% endblock %}
+        <script src="/scripts.js"></script>
         <footer>
             <p>Todos direitos reservados, receitas Foodfy.</p>
         </footer>

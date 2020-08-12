@@ -1,8 +1,8 @@
 <h1 align="center">
-    <img src="assets/logo.png" alt="Logo do Foodfy">
+    <img src="public/assets/logo.png" alt="Logo do Foodfy">
 </h1>
 <h1>
-    <img src="assets/apresentacao.gif">
+    <img src="public/assets/apresentacao.gif">
 </h1>
 
 # 📋 Indice
@@ -34,6 +34,9 @@ git clone https://github.com/BrunoPiresDeOliveira/foodfy
 
 # Entrar no diretório
 cd foodfy
+
+# Iniciar o servidor
+npm start
 ```
 
 ## 📝 Licença
