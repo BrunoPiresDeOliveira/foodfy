@@ -17,59 +17,20 @@
     cursor: pointer;
 }
 
-/*========MODAL=========*/
-
-.modal-overlay {
-    background-color: rgba(0,0,0, 0.6);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
+/*========RECIPE DETAIL=========*/
+.recipe-detail img {
+    border-radius: 15px 15px;
 }
 
-.modal {
-    background-color: white;
-    border-radius: 15px;
-    width: 660px;
-    height: 413px;
-    margin: 15% auto;
-    position: relative;
-}
-
-.modal-content img {
-    width: 600px;
-    height: 200px;
-    border-radius: 15px;
-    margin: 30px 30px 20px 30px;
-}
-
-.modal-content h3 {
+.recipe-detail h3 {
+    margin-top: 50px;
     text-align: center;
-    font-size: 24px;
-    color: #111111;
+    font-size: 36px;
+    font-weight: bold;
 }
 
-.modal-content p {
-    font-size: 18px;
+.recipe-detail p {
+    text-align: center;
+    margin-top: 4px;
     color: #777777;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.modal .modal-content .close-modal {
-    font-size: 16px;
-    color: #999999;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    margin-top: 40px;
-    cursor: pointer;
-}
-
-/* ===== MODAL ACTIVE ===== */
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
 }

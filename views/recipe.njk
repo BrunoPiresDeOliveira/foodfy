@@ -1,1 +1,55 @@
-{% extends layout %}
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{item.title}} - Foodfy</title>
+    <link rel="stylesheet" href="/styles-recipes.css">
+{% endblock%}
+
+{% block header %}
+    <a href="/sobre">Sobre</a>
+    <a href="/receitas" style="font-weight: bold;">Receitas</a>
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="recipe-detail" id="{{item.id}}">
+            <img src="{{item.image}}" alt="Imagem do prato {{item.title}}">
+            <h3>{{item.title}}</h3>
+            <p>por {{item.author}}</p>
+        </div>
+        <section class="preparetion">
+            <div class="button-text">
+                <h2 id="detail">Ingredientes</h2>
+                <a class="button">ESCONDER</a>
+            </div>
+            <div class="detail show">
+                <ul>
+                    {% for ingredient in item.ingredients %}
+                        <li>{{ingredient}};</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        <section class="preparetion">
+            <div class="button-text">
+                <h2 id="detail">Modo de preparo</h2>
+                <a class="button">ESCONDER</a>
+            </div>
+            <div class="detail show">
+                {% for preparation in item.preparation%}
+                    <p>{{preparation}}</p>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="information">
+            <div class="button-text">
+                <h2 id="detail">Informações adicionais</h2>
+                <a class="button">ESCONDER</a>
+            </div>
+            <div class="detail show">
+                <p>{{item.information}}</p>
+            </div>
+        </section>
+    </main>
+{% endblock %}

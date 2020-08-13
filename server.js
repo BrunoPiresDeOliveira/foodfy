@@ -26,15 +26,14 @@ server.get ("/receitas", function (req, res) {
     return res.render('recipes', {items: recipes})
 })
 
-server.get("/receita", function(req, res) {
-    const id = req.query.id
-    const recipe = recipes.find(function(recipe) {
-        return recipe.id == id  
-    })
-    if (!recipe) {
-        return res.send("Recipe not found!")
+server.get("/receitas/:index", function (req, res) {
+    const recipeIndex = req.params.index;
+
+    if (!recipes[recipeIndex]) {
+        return res.status(404).send("Recipe not found!")
     }
-    return res.render("recipe", { item: recipes })
+
+    return res.render("recipe", {item: recipes[recipeIndex]})
 })
 
 
