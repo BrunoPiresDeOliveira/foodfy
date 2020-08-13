@@ -172,3 +172,8 @@ footer p {
     visibility: hidden;
     display: none;
 }
+
+.notFound {
+    text-align: center;
+    margin: 42vh 0;
+}

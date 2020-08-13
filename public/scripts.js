@@ -7,7 +7,7 @@ for (let recipe of recipes) {
     })
 }
 
-// RECIPE ========================================================
+// ====================================RECIPE====================================
 
 const details = document.querySelectorAll('.detail')
 const buttons = document.querySelectorAll('.button')

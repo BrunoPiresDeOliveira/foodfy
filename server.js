@@ -30,11 +30,15 @@ server.get("/receitas/:index", function (req, res) {
     const recipeIndex = req.params.index;
 
     if (!recipes[recipeIndex]) {
-        return res.status(404).send("Recipe not found!")
+        return res.status(404).render("not-found")
     }
 
     return res.render("recipe", {item: recipes[recipeIndex]})
 })
+
+server.use(function(req, res) {
+    res.status(404).render("not-found");
+});
 
 
 server.listen(5000, function() {
